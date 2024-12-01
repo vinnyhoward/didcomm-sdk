@@ -1,13 +1,17 @@
-pub mod crypto;
-pub mod wallet;
-pub mod didcomm;
-pub mod error;
+use std::ffi::{CString, c_char};
 
-pub use crate::crypto::KeyManager;
-pub use crate::wallet::Wallet;
-pub use crate::didcomm::Message;
-pub use crate::error::Error;
+#[no_mangle]
+pub extern "C" fn hello_world() -> *mut c_char {
+    let message = CString::new("Hello World from Rust!").unwrap();
+    message.into_raw()
+}
 
-fn main() {
-    println!("Hello, world!");
+#[no_mangle]
+pub extern "C" fn free_string(ptr: *mut c_char) {
+    unsafe {
+        if ptr.is_null() {
+            return;
+        }
+        CString::from_raw(ptr);
+    }
 }
