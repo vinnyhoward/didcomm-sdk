@@ -1,0 +1,49 @@
+[target.aarch64-linux-android]
+ar = "/Users/vincenthoward/Library/Android/sdk/ndk/24.0.8215888/toolchains/llvm/prebuilt/darwin-x86_64/bin/llvm-ar"
+linker = "/Users/vincenthoward/Library/Android/sdk/ndk/24.0.8215888/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang"
+rustflags = [
+    "-C", "link-arg=--target=aarch64-linux-android21",
+    "-C", "link-arg=-fuse-ld=lld",
+    "-C", "link-arg=-Wl,--no-rosegment",
+    "-C", "link-arg=-L/Users/vincenthoward/Library/Android/sdk/ndk/24.0.8215888/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib/aarch64-linux-android/21",
+]
+
+[env]
+CC_aarch64-linux-android = "/Users/vincenthoward/Library/Android/sdk/ndk/24.0.8215888/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang"
+CXX_aarch64-linux-android = "/Users/vincenthoward/Library/Android/sdk/ndk/24.0.8215888/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang++"
+AR_aarch64-linux-android = "/Users/vincenthoward/Library/Android/sdk/ndk/24.0.8215888/toolchains/llvm/prebuilt/darwin-x86_64/bin/llvm-ar"
+CARGO_TARGET_AARCH64_LINUX_ANDROID_LINKER = "/Users/vincenthoward/Library/Android/sdk/ndk/24.0.8215888/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang"
+ANDROID_NDK_HOME = "/Users/vincenthoward/Library/Android/sdk/ndk/24.0.8215888"
+ANDROID_NDK_ROOT = "/Users/vincenthoward/Library/Android/sdk/ndk/24.0.8215888"
+CFLAGS_aarch64-linux-android = "--target=aarch64-linux-android21 -I/Users/vincenthoward/Library/Android/sdk/ndk/24.0.8215888/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/include"
+CXXFLAGS_aarch64-linux-android = "--target=aarch64-linux-android21 -I/Users/vincenthoward/Library/Android/sdk/ndk/24.0.8215888/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/include"
+
+[target.armv7-linux-androideabi]
+ar = "/Users/vincenthoward/Library/Android/sdk/ndk/24.0.8215888/toolchains/llvm/prebuilt/darwin-x86_64/bin/llvm-ar"
+linker = "/Users/vincenthoward/Library/Android/sdk/ndk/24.0.8215888/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang"
+rustflags = [
+    "-C", "link-arg=--target=armv7-linux-androideabi21",
+    "-C", "link-arg=-fuse-ld=lld",
+    "-C", "link-arg=-Wl,--no-rosegment",
+    "-C", "link-arg=-L/Users/vincenthoward/Library/Android/sdk/ndk/24.0.8215888/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib/arm-linux-androideabi/21",
+]
+
+[target.i686-linux-android]
+ar = "/Users/vincenthoward/Library/Android/sdk/ndk/24.0.8215888/toolchains/llvm/prebuilt/darwin-x86_64/bin/llvm-ar"
+linker = "/Users/vincenthoward/Library/Android/sdk/ndk/24.0.8215888/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang"
+rustflags = [
+    "-C", "link-arg=--target=i686-linux-android21",
+    "-C", "link-arg=-fuse-ld=lld",
+    "-C", "link-arg=-Wl,--no-rosegment",
+    "-C", "link-arg=-L/Users/vincenthoward/Library/Android/sdk/ndk/24.0.8215888/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib/i686-linux-android/21",
+]
+
+[target.x86_64-linux-android]
+ar = "/Users/vincenthoward/Library/Android/sdk/ndk/24.0.8215888/toolchains/llvm/prebuilt/darwin-x86_64/bin/llvm-ar"
+linker = "/Users/vincenthoward/Library/Android/sdk/ndk/24.0.8215888/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang"
+rustflags = [
+    "-C", "link-arg=--target=x86_64-linux-android21",
+    "-C", "link-arg=-fuse-ld=lld",
+    "-C", "link-arg=-Wl,--no-rosegment",
+    "-C", "link-arg=-L/Users/vincenthoward/Library/Android/sdk/ndk/24.0.8215888/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib/x86_64-linux-android/21",
+] 

@@ -12,6 +12,6 @@ pub extern "C" fn free_string(ptr: *mut c_char) {
         if ptr.is_null() {
             return;
         }
-        CString::from_raw(ptr);
+        drop(CString::from_raw(ptr));
     }
 }
